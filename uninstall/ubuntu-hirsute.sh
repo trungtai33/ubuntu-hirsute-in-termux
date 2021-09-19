@@ -4,6 +4,6 @@ printf "\n\e[34m[\e[32m*\e[34m]\e[36m Uninstalling Ubuntu Hirsute, please wait..
 rm -rf "$PREFIX/share/ubuntu-hirsute"
 rm -f "$PREFIX/bin/start-ubuntu-hirsute"
 printf "\e[34m[\e[32m*\e[34m]\e[36m Uninstalled successfully.\n\n\e[0m"
-exit 1
+exit
 fi
 printf "\n\e[31mError: distribution Ubuntu Hirsute is not installed.\n\n\e[0m"
