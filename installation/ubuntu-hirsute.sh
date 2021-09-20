@@ -155,7 +155,7 @@ cat <<- EOF > "$PREFIX/share/$directory/proc/.model"
 $(getprop ro.product.brand) $(getprop ro.product.model)
 EOF
 cat <<- EOF > "$PREFIX/share/$directory/proc/.version"
-Linux version 5.11.0 (build@ubuntu) (gcc version 4.9 (GCC)) $(uname -v)
+Linux version 5.11.0 (termux@ubuntu) (gcc version 4.9 (GCC)) $(uname -v)
 EOF
 bin="start-ubuntu-hirsute"
 printf "\e[34m[\e[32m*\e[34m]\e[36m Writing $bin file...\n\e[0m"
