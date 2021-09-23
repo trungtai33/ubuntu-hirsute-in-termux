@@ -39,11 +39,11 @@ cat <<- EOF > "$PREFIX/share/$directory/etc/hosts"
 ::1       ip6-localhost ip6-loopback
 EOF
 printf "\e[34m[\e[32m*\e[34m]\e[36m Writing group file (GIDs)...\n\e[31m"
-while read gid; do
+while read group_name group_id; do
 cat <<- EOF >> "$PREFIX/share/$directory/etc/group"
-root:x:$gid:
+$group_name:x:$group_id:
 EOF
-done < <(paste <(id -G | tr ' ' '\n'))
+done < <(paste <(id -Gn | tr ' ' '\n') <(id -G | tr ' ' '\n'))
 cat <<- EOF > "$PREFIX/share/$directory/proc/.loadavg"
 0.35 0.22 0.15 1/573 7767
 EOF
