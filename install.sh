@@ -1,7 +1,8 @@
 #!/data/data/com.termux/files/usr/bin/bash
 directory="ubuntu-hirsute"
+distro_name="Ubuntu Hirsute"
 if [ -d "${PREFIX}/share/${directory}" ]; then
-printf "\n\e[31mError: distribution Ubuntu Hirsute is already installed.\n\n\e[0m"
+printf "\n\e[31mError: distribution ${distro_name} is already installed.\n\n\e[0m"
 exit
 fi
 printf "\n\e[34m[\e[32m*\e[34m]\e[36m Checking device architecture...\n\e[0m"
@@ -16,7 +17,6 @@ esac
 apt update > /dev/null 2>&1
 apt install -y proot > /dev/null 2>&1
 tarball="rootfs.tar.gz"
-distro_name="Ubuntu Hirsute"
 printf "\e[34m[\e[32m*\e[34m]\e[36m Downloading ${distro_name}, please wait...\n\n\e[34m"
 curl --fail --retry 5 --location --output "${tarball}" \
 "https://partner-images.canonical.com/core/hirsute/current/ubuntu-hirsute-core-cloudimg-${arch}-root.tar.gz"
