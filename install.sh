@@ -53,7 +53,7 @@ ${group_name}:!::
 EOF
 done < <(paste <(id -Gn | tr ' ' '\n') <(id -G | tr ' ' '\n'))
 cat <<- EOF > "${PREFIX}/share/${directory}/proc/.loadavg"
-0.35 0.22 0.15 1/573 7767
+0.35 0.22 0.15 1/575 7767
 EOF
 cat <<- EOF > "${PREFIX}/share/${directory}/proc/.stat"
 cpu  265542 13183 24203 611072 152293 68 191340 255 0 0 0
@@ -207,4 +207,4 @@ EOF
 termux-fix-shebang "${PREFIX}/bin/start-${directory}"
 chmod 700 "${PREFIX}/bin/start-${directory}"
 printf "\e[34m[\e[32m*\e[34m]\e[36m Installation successfully.\n\n\e[0m"
-printf "\e[36mNow run \e[32mstart-${directory}\e[36m to login.\n\n\e[0m"
+printf "\e[36mNow run \e[32mstart-${directory}\e[36m to login.\n\n\e[0m
