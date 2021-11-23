@@ -1,6 +1,7 @@
 ## Ubuntu 21.04 (Hirsute Hippo) in Termux
 ![image](neofetch.png)
 ## Installation
+Copy and paste this command into Termux:
 ```
 curl --silent --location --remote-name https://raw.githubusercontent.com/trungtai33/ubuntu-hirsute-in-termux/master/install.sh && bash install.sh && rm install.sh
 ```
